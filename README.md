@@ -1,1 +1,40 @@
-# RMI
+# Table of contents
+* [General info](#general-info)
+* [Data structure](#data-structure)
+* [Built With](#built-with)
+* [Save parameters](#save-parameters)
+* [Prepare to play](#prepare-to-play)
+* [License](#license)
+
+# About The Project
+
+## General info
+
+<p class="text-justify">
+This project is a simple VST3 delay effect that works separately on the left and right channel. You can use different delay time on left and right channel, which can be also synchronized to tempo of the song by setting rhythmic division.   There is also a bunch of additional effect like tap echo or flanger.
+</p>
+
+![Product Name Screen Shot](https://github.com/jarekkopaczewski/TwinEcho/blob/e82460d70e3dbb9e6220f74dcf8eb0781a36adcc/TwinDelay.png)
+
+## Data structure
+
+![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/designer.png)
+![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/site.png)
+![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/manager.png)
+![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/video.gif)
+
+
+## Built With
+
+* [JAVA](https://www.java.com/pl/)
+
+## Save parameters
+
+```java
+```
+
+## License
+
+Distributed under the MIT License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>

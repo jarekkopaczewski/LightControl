@@ -57,8 +57,30 @@ public Boolean addTo(String ip)
 }
 ```
 
+## Connect manager
+
+```java
+public void connect(String ip, int port)
+{
+    try 
+    {
+        Registry reg = LocateRegistry.getRegistry(ip ,3000);
+        this.ic = (IControlCenter) reg.lookup("ControlCenter");
+        
+        IManager im = (IManager) UnicastRemoteObject.exportObject(this, port);
+        System.out.println("Manager is ready");
+        
+        ic.subscribe(im);
+    } 
+    catch (RemoteException | NotBoundException e) 
+    {
+        e.printStackTrace();
+    }
+}
+```
+
 ## License
 
-Distributed under the MIT License.
+Distributed under the Apache-2.0 License.
 
 <p align="right">(<a href="#top">back to top</a>)</p>

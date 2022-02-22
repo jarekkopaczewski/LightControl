@@ -36,6 +36,25 @@ This project is a simple VST3 delay effect that works separately on the left and
 ## Save parameters
 
 ```java
+public Boolean addTo(String ip)
+{
+    try 
+    {
+        Registry reg = LocateRegistry.getRegistry(ip, 3000);
+        ic = (IControlCenter) reg.lookup("ControlCenter");
+        ISite is = (ISite) UnicastRemoteObject.exportObject(this, port);
+        
+        if(!ic.add(is))
+            return false;
+        else
+            return true;
+    } 
+    catch (RemoteException | NotBoundException e)
+    {
+        System.out.println("Nie dodano mixera do IC");
+    }
+    return false;
+}
 ```
 
 ## License

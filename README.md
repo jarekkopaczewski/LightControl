@@ -14,14 +14,12 @@
 This project is a simple VST3 delay effect that works separately on the left and right channel. You can use different delay time on left and right channel, which can be also synchronized to tempo of the song by setting rhythmic division.   There is also a bunch of additional effect like tap echo or flanger.
 </p>
 
-![Product Name Screen Shot](https://github.com/jarekkopaczewski/TwinEcho/blob/e82460d70e3dbb9e6220f74dcf8eb0781a36adcc/TwinDelay.png)
-
 ## Data structure
 
-![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/designer.png)
-![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/site.png)
-![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/manager.png)
-![Product Name Screen Shot](https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/video.gif)
+<img src = "https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/designer.png" width = "500"/>
+<img src = "https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/site.gif" width = "500"/>
+<img src = "https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/manager.gif" width = "500"/>
+<img src = "https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/video.gif" width = "500"/>
 
 
 ## Built With

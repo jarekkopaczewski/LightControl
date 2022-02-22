@@ -15,6 +15,7 @@ This project is a simple VST3 delay effect that works separately on the left and
 </p>
 
 ## Program structure
+<img src = "https://github.com/jarekkopaczewski/LightControl/blob/983dcd27f293eb66c7e13cba7182865962603e2b/Illuminations.png" width = "450"/>
 
 ## Designer
 <img src = "https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/designer.png" width = "600"/>

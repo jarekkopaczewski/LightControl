@@ -1,9 +1,15 @@
 # Table of contents
 * [General info](#general-info)
-* [Data structure](#data-structure)
 * [Built With](#built-with)
-* [Save parameters](#save-parameters)
-* [Prepare to play](#prepare-to-play)
+* [Program structure](#program-structure)
+* [Designer](#designer)
+* [Site](#site)
+* [Manager](#manager)
+* [Running site](#running-site)
+* [Add Site](#add-site)
+* [Designer](#designer)
+* [Connect manager](#connect-manager)
+* [Add mixer](#add-mixer)
 * [License](#license)
 
 # About The Project
@@ -11,8 +17,12 @@
 ## General info
 
 <p class="text-justify">
-This project is a simple VST3 delay effect that works separately on the left and right channel. You can use different delay time on left and right channel, which can be also synchronized to tempo of the song by setting rhythmic division.   There is also a bunch of additional effect like tap echo or flanger.
+The program is used to operate a system of lights placed at various locations around the city. It consists of a Designer used to select colors and a sequence of lights. Site represents the display location and Manager connects the created Mixers to the display locations.
 </p>
+
+## Built With
+
+* [JAVA](https://www.java.com/pl/)
 
 ## Program structure
 <img src = "https://github.com/jarekkopaczewski/LightControl/blob/983dcd27f293eb66c7e13cba7182865962603e2b/Illuminations.png" width = "450"/>
@@ -29,11 +39,7 @@ This project is a simple VST3 delay effect that works separately on the left and
 ## Running site
 <img src = "https://github.com/jarekkopaczewski/LightControl/blob/6477d28369ab28a2cc142aa37db4a43fa97ef058/video.gif" width = "300"/>
 
-## Built With
-
-* [JAVA](https://www.java.com/pl/)
-
-## Save parameters
+## Add Site
 
 ```java
 public Boolean addTo(String ip)
@@ -76,6 +82,32 @@ public void connect(String ip, int port)
     {
         e.printStackTrace();
     }
+}
+```
+
+## Add mixer
+
+```java
+public class Designer 
+{
+	public Boolean addMixer( Mixer mixer, String ip )
+	{
+		try 
+		{
+			Registry reg = LocateRegistry.getRegistry(ip, 3000);
+			IControlCenter ic = (IControlCenter) reg.lookup("ControlCenter");
+			
+			if(!ic.add(mixer))
+				return false;
+			else
+				return true;
+		} 
+		catch (RemoteException | NotBoundException e) 
+		{ 
+			System.out.println("Nie dodano mixera do IC");
+		}
+		return false;
+	}
 }
 ```
 

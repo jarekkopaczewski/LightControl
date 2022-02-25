@@ -14,6 +14,7 @@ public class SnakeInside extends Algo
 		copy = new int[25];
 	}
 	
+	
 	@Override
 	public void mix(int[] lightings)
 	{

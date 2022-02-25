@@ -29,7 +29,4 @@ public abstract class Algo extends Mixer
 	{
 		return this.time;
 	}
-	
-
-	
 }

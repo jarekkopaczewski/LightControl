@@ -42,10 +42,8 @@ The program is used to operate a system of lights placed at various locations ar
 ## Add Site
 
 ```java
-public Boolean addTo(String ip)
-{
-    try 
-    {
+public Boolean addTo(String ip){
+    try {
         Registry reg = LocateRegistry.getRegistry(ip, 3000);
         ic = (IControlCenter) reg.lookup("ControlCenter");
         ISite is = (ISite) UnicastRemoteObject.exportObject(this, port);
@@ -55,8 +53,7 @@ public Boolean addTo(String ip)
         else
             return true;
     } 
-    catch (RemoteException | NotBoundException e)
-    {
+    catch (RemoteException | NotBoundException e){
         System.out.println("Nie dodano mixera do IC");
     }
     return false;
@@ -66,10 +63,8 @@ public Boolean addTo(String ip)
 ## Connect manager
 
 ```java
-public void connect(String ip, int port)
-{
-    try 
-    {
+public void connect(String ip, int port){
+    try {
         Registry reg = LocateRegistry.getRegistry(ip ,3000);
         this.ic = (IControlCenter) reg.lookup("ControlCenter");
         
@@ -78,8 +73,7 @@ public void connect(String ip, int port)
         
         ic.subscribe(im);
     } 
-    catch (RemoteException | NotBoundException e) 
-    {
+    catch (RemoteException | NotBoundException e) {
         e.printStackTrace();
     }
 }
@@ -88,12 +82,9 @@ public void connect(String ip, int port)
 ## Add mixer
 
 ```java
-public class Designer 
-{
-	public Boolean addMixer( Mixer mixer, String ip )
-	{
-		try 
-		{
+public class Designer {
+	public Boolean addMixer( Mixer mixer, String ip ){
+		try {
 			Registry reg = LocateRegistry.getRegistry(ip, 3000);
 			IControlCenter ic = (IControlCenter) reg.lookup("ControlCenter");
 			
@@ -102,8 +93,7 @@ public class Designer
 			else
 				return true;
 		} 
-		catch (RemoteException | NotBoundException e) 
-		{ 
+		catch (RemoteException | NotBoundException e) { 
 			System.out.println("Nie dodano mixera do IC");
 		}
 		return false;

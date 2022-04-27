@@ -47,11 +47,7 @@ public Boolean addTo(String ip){
         Registry reg = LocateRegistry.getRegistry(ip, 3000);
         ic = (IControlCenter) reg.lookup("ControlCenter");
         ISite is = (ISite) UnicastRemoteObject.exportObject(this, port);
-        
-        if(!ic.add(is))
-            return false;
-        else
-            return true;
+       	return ic.add(is);
     } 
     catch (RemoteException | NotBoundException e){
         System.out.println("Nie dodano mixera do IC");
@@ -87,11 +83,7 @@ public class Designer {
 		try {
 			Registry reg = LocateRegistry.getRegistry(ip, 3000);
 			IControlCenter ic = (IControlCenter) reg.lookup("ControlCenter");
-			
-			if(!ic.add(mixer))
-				return false;
-			else
-				return true;
+			return ic.add(mixer);
 		} 
 		catch (RemoteException | NotBoundException e) { 
 			System.out.println("Nie dodano mixera do IC");
